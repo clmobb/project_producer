@@ -12,7 +12,6 @@ Text Domain: benaissa
 
 */
 
-
 /* ************************************************* */
 /* ***  OVERVIEW  ********************************** */
 /*
@@ -32,13 +31,16 @@ Text Domain: benaissa
 }
 
 html {
-    overflow-x:hidden;
+    overflow-x : hidden;
 }
 
 body {
-    font-size:14px;
-    color: #ccc;
-    background:#161a17;
+    font-family : 'Proxima Nova', Helvetica, Arial, sans-serif;
+    font-size   : 14px;
+    line-height : 1.5em;
+    color       : #cccccc;
+    background  : #161a17 url(/wp-content/themes/benaissa/img/bg.jpg) no-repeat center;
+    background-size:cover;
 }
 
 article,
@@ -51,32 +53,31 @@ header,
 nav,
 section,
 summary {
-    display: block;
+    display : block;
 }
 
 audio,
 canvas,
 video {
-    display: inline-block;
+    display : inline-block;
 }
 
 a, a:hover, a:active {
-    color: inherit;
-    text-decoration: none;
+    color           : inherit;
+    text-decoration : none;
 }
 
 a:hover {
-    color: #72caf7;
+    color : #72caf7;
 }
 
 ul {
-    list-style: none;
+    list-style : none;
 }
 
-#page {
-    max-width: 1280px;
-    padding:20px;
-    margin:0 auto;
+img {
+    width  : 100%;
+    height : auto;
 }
 
 /* ************************************************* */
@@ -84,20 +85,26 @@ ul {
 /* ************************************************* */
 
 a#mobileNavigation {
-    display:none;
+    display : none;
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width : 1000px) {
 
-    .hideTablet { display:none; }
+    .hideTablet {
+        display : none;
+    }
 
 }
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width : 640px) {
 
-    .hideMobile { display:none; }
+    .hideMobile {
+        display : none;
+    }
 
-    .showMobile { display:block !important; }
+    .showMobile {
+        display : block !important;
+    }
 
 }
 
@@ -106,75 +113,370 @@ a#mobileNavigation {
 /* ************************************************* */
 
 .grid {
-    overflow:hidden;
+    overflow : hidden;
 }
 
 .span,
 .span2 {
-    float:left;
-    margin-right:5%
+    float        : left;
+    margin-right : 5%
 }
 
-.span { width:30% }
-.span2 { width:65%; }
+.span {
+    width : 30%
+}
+.span2 {
+    width : 65%;
+}
 
-.offset1 { margin-left:35%; }
-.offset2 { margin-left:70%; }
+.offset1 {
+    margin-left : 35%;
+}
+.offset2 {
+    margin-left : 70%;
+}
 
+.span.offset2,
+.span2.offset1,
 .span.last,
 .span2.last {
-    margin-right:0;
+    margin-right : 0;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width : 1000px) {
 
     .span,
     .span2 {
-        width: 48%;
-        margin-right:4%
+        width        : 48%;
+        margin-right : 4%
     }
 
     .span.fullTablet,
     .span2.fullTablet {
-        width: 100%;
-        margin-right:0;
+        width        : 100%;
+        margin-right : 0;
     }
-
 
     .offset1,
     .offset2 {
-        margin-left:52%;
+        margin-left : 52%;
+    }
+
+}
+
+@media only screen and (max-width : 640px) {
+
+    .span,
+    .span2 {
+        width        : 100%;
+        margin-right : 0;
+    }
+
+    .offset1,
+    .offset2 {
+        margin-left : 0;
+    }
+
+}
+
+header .span {
+    width:30%;
+}
+
+header .span2 {
+    width:65%;
+}
+
+/* ************************************************* */
+/* *** 4. HEADER *********************************** */
+/* ************************************************* */
+
+a#logo {
+    display:block;
+}
+
+/* ************************************************* */
+/* *** 4. NAVIGATION  ****************************** */
+/* ************************************************* */
+
+nav#main {
+    font-family : 'Rock Salt', Helvetica, Arial, sans-serif;
+}
+
+nav#meta {
+    float : right;
+}
+
+nav ul {
+    overflow : hidden;
+}
+
+nav ul li {
+    float : left;
+}
+
+nav#main ul li {
+    height       : 60px;
+    line-height  : 60px;
+
+    margin-right : 20px;
+}
+
+nav#meta ul li {
+    height      : 30px;
+    line-height : 30px;
+}
+
+nav ul li a {
+    display    : block;
+    text-align : center;
+    padding    : 0 15px;
+}
+
+/* ************************************************* */
+/* *** 5. PAGE ELEMENTS  *************************** */
+/* ************************************************* */
+
+.pageContainer,
+#page {
+    position:relative;
+    max-width : 1280px;
+    padding   : 0 20px;
+    margin    : 0 auto;
+}
+
+header {
+    /*background:rgba(0,0,0,0.5);*/
+}
+
+footer {
+    width:100%;
+    background : #000000;
+    overflow   : hidden;
+}
+
+section.header {
+
+}
+
+section.content {
+
+}
+
+.vspan {
+    margin-top : 40px;
+}
+.vspan.half {
+    margin-top : 20px;
+}
+.vspan.quarter {
+    margin-top : 10px;
+}
+
+/* ************************************************* */
+/* *** 5. STARTPAGE  TEASER ELEMENTS  ************** */
+/* ************************************************* */
+
+h2.headline {
+    line-height:36px;
+    padding-bottom:25px;
+
+    background:url(/wp-content/themes/benaissa/img/bg-headline-white.png) no-repeat left bottom;
+}
+
+h2.headline.fontBlue {
+    background:url(/wp-content/themes/benaissa/img/bg-headline-blue.png) no-repeat left bottom;
+}
+
+.intended {
+    padding : 0 20px;
+}
+
+#tourContainer ul,
+#galleryConrtainer ul {
+    overflow : hidden;
+}
+
+/* *********************** */
+/* *** VIDEO CONTAINER *** */
+/* *********************** */
+
+#videoContainer {
+    padding:20px;
+
+    background:url(/wp-content/themes/benaissa/img/bg-galleryImages.png) no-repeat center;
+    background-size:100% 100%;
+}
+
+.videoWrapper {
+    position:relative;
+    width:100%;
+    height:0;
+    padding-bottom:56.25%;
+
+    margin:0 -5px;
+}
+
+.videoWrapper video {
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    border:5px solid #000;
+    /*box-sizing: border-box;*/
+}
+
+/* ********************** */
+/* *** TOUR CONTAINER *** */
+/* ********************** */
+
+#tourContainer {
+    width:75%;
+}
+
+#tourContainer ul li {
+    display:inline-block;
+    float:left;
+
+    margin-right:30px;
+}
+
+#tourContainer ul li a span {
+    display:block;
+}
+
+#tourContainer ul li a span.date {
+    margin-top:-3px;
+}
+
+/* ************************* */
+/* *** GALLERY CONTAINER *** */
+/* ************************* */
+
+#galleryContainer ul li {
+    float           : left;
+    width           : 25%;
+    padding         : 2.5%;
+
+    background      : url(/wp-content/themes/benaissa/img/bg-galleryImages.png) no-repeat center;
+    background-size : contain;
+
+    box-sizing      : border-box;
+}
+
+#galleryContainer ul li img {
+    border     : 2px solid #000000;
+    box-sizing : border-box;
+}
+
+/* ************************* */
+/* *** ARTICLE CONTAINER *** */
+/* ************************* */
+
+#articleContainer p {
+    -moz-column-count    : 2;
+    -moz-column-gap      : 40px;
+    -webkit-column-count : 2;
+    -webkit-column-gap   : 40px;
+}
+
+/* ************************* */
+/* *** SHOUTER CONTAINER *** */
+/* ************************* */
+
+#shouterContainer ul li {
+    overflow:hidden;
+
+    margin-top:10px;
+}
+
+#shouterContainer ul li .profilePicture {
+    float:left;
+    width:50px;
+    height:50px;
+
+    margin-top:5px;
+    margin-right:10px;
+
+    border:2px solid #ccc;
+    box-sizing: border-box;
+
+    background:url(/wp-content/themes/benaissa/img/dummy-profile.jpg) no-repeat center;
+}
+
+#shouterContainer ul li p {
+    line-height: 1.4em;
+}
+
+@media only screen and (max-width:1000px) {
+
+    #tourContainer {
+        width:100%;
+    }
+
+    #articleContainer p {
+        -moz-column-count    : 1;
+        -moz-column-gap      : 0;
+        -webkit-column-count : 1;
+        -webkit-column-gap   : 0;
+    }
+
+    #galleryContainer ul li {
+        width           : 50%;
+        padding         : 5%;
     }
 
 }
 
 @media only screen and (max-width:640px) {
 
-    .span,
-    .span2 {
-        width:100%;
-        margin-right:0;
-    }
+    /*h2.headline {*/
+        /*text-align: center;*/
+        /*background-position: center bottom !important;*/
+    /*}*/
 
-    .offset1,
-    .offset2 {
-        margin-left:0;
-    }
-
+    /*#tourContainer,*/
+    /*#shouterContainer {*/
+        /*width:50%;*/
+        /*margin:0 auto;*/
+    /*}*/
 }
 
 /* ************************************************* */
-/* *** 2. FONTS  *********************************** */
+/* *** 5. FONTS  *********************************** */
 /* ************************************************* */
 
 h1, h2, h3, h4 {
-    font-family : 'Rock Salt', cursive;
+    font-family : 'Rock Salt', Helvetica, Arial, sans-serif;
+    line-height : 1.5em;
 }
 
-.font34, h1 { font-size:34px; }
-.font24, h2 { font-size:24px; }
-.font18, h3 { font-size:18px; }
-.font14, h4 { font-size:14px; }
+.fontRock {
+    font-family : 'Rock Salt', Helvetica, Arial, sans-serif;
+}
 
-.blue { color: #72caf7; }
-.white { color: #ccc; }
+.font34, h1 {
+    font-size : 34px;
+}
+.font24, h2 {
+    font-size : 24px;
+}
+.font18, h3 {
+    font-size : 18px;
+}
+.font14, h4 {
+    font-size : 14px;
+}
+.font12 {
+    font-size : 12px;
+}
+
+.fontBlue {
+    color : #72caf7;
+}
+.fontWhite {
+    color : #cccccc;
+}
+.fontGrey {
+    color:#999;
+}
